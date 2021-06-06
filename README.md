@@ -13,7 +13,7 @@ On your running Rancher installation:
 1. Check [csi-driver](https://github.com/hetznercloud/csi-driver) & [cloud-controller-manager](https://github.com/hetznercloud/hcloud-cloud-controller-manager) for latest versions
 2. Add nodes with hz template
 3. Kubernetes Options > Cloud Provider > External
-4. Edit YAML (replace --xxxxx with API token for k8s cluster)
+4. Edit YAML (replace --xxxxx with API token for k8s cluster + network-id with id from the Project's network page)
 
 ```yaml
 rancher_kubernetes_engine_config:
@@ -23,6 +23,7 @@ rancher_kubernetes_engine_config:
     apiVersion: v1
     stringData:
       token: --xxxxx
+      network: "NETWORK-ID"
     kind: Secret
     metadata:
       name: hcloud
