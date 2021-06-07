@@ -3,8 +3,7 @@ k8s knowledge for rancher set-ups
 
 ## prep
 On your running Rancher installation:
-1. Add [machine driver](https://github.com/mxschmitt/ui-driver-hetzner)
-2. Add [UI driver](https://mxschmitt.github.io/ui-driver-hetzner/)
+1. Add Hetzner cluster functionality for node templates and provisioning; https://{rancher_host}/n/drivers/node > Add [Rancher 2 Hetzner Cloud UI Driver](https://mxschmitt.github.io/ui-driver-hetzner/)
 3. Create HZ project + network
 4. Create templates for diffrent server types (don't forget to select network, disable private network if k8s API must be availble publicly (GitLab managed cluster for example))
 
